@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "@sveltejs",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "plugin:jest-dom/recommended",
+        "testing-library"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "*.svelte"
+            ],
+            "processor": "svelte3/svelte3"
+        }
+    ]
+}
