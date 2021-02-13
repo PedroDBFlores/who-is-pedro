@@ -43,7 +43,7 @@ export default {
 			preprocess: sveltePreprocess({ sourceMap: !production }),
 			compilerOptions: {
 				// enable run-time checks when not in production
-				dev: !production
+				dev: !production,
 			}
 		}),
 		// we'll extract any component CSS out into
@@ -62,7 +62,11 @@ export default {
 		commonjs(),
 		typescript({
 			sourceMap: !production,
-			inlineSources: !production
+			inlineSources: !production,
+			strict: true,
+			noImplicitAny: true,
+			allowJs: true,
+			exclude: ["**/*.test.ts"]
 		}),
 
 		// In dev mode, call `npm run start` once
