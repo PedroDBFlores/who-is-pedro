@@ -2,7 +2,7 @@
     export let changeTheme: () => void;
 
     import { Button, Icon } from "svelte-materialify";
-    import { mdiWeatherSunny } from "@mdi/js";
+    import { mdiThemeLightDark  } from "@mdi/js";
 </script>
 
 <div class="d-flex justify-space-between">
@@ -11,8 +11,7 @@
         aria-label="Toggle theme"
         on:click={changeTheme}
         icon
-        class="gray-text"
-    >
-        <Icon path={mdiWeatherSunny} />
+        class="gray-text">
+        <Icon  path={mdiThemeLightDark} />
     </Button>
 </div>
