@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { MaterialApp } from "svelte-materialify";
-
-	import Heading from "./components/heading/heading.svelte";
-	let theme: "light" | "dark" = "light";
+	import { MaterialApp } from "svelte-materialify"
+	import Heading from "./components/heading.svelte"
+	let theme: "dark" | "light" = "light"
 
 	function toggleTheme() {
-		if (theme === "light") theme = "dark";
-		else theme = "light";
+		if (theme === "light") theme = "dark"
+		else theme = "light"
 	}
 </script>
 
