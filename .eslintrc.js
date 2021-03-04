@@ -4,9 +4,6 @@ module.exports = {
     "eslint:recommended",
     "@sveltejs",
     "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended",
-    "plugin:jest-dom/recommended",
-    "plugin:testing-library/recommended"
   ],
   plugins: [
     "svelte3",
@@ -50,20 +47,6 @@ module.exports = {
       processor: "svelte3/svelte3",
       settings: {
         "svelte3/typescript": require("typescript")
-      }
-    },
-    {
-      files: [
-        "*.test.ts",
-        "tests/**"
-      ],
-      rules: {
-        "testing-library/prefer-find-by": "error",
-        "testing-library/no-debug": "error",
-        "no-restricted-globals": [
-          "error",
-          "console"
-        ]
       }
     }
   ]
