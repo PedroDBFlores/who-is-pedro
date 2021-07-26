@@ -7,6 +7,7 @@ import sveltePreprocess from "svelte-preprocess"
 import typescript from "@rollup/plugin-typescript"
 import css from "rollup-plugin-css-only"
 import image from "@rollup/plugin-image"
+import childProcess from "child_process"
 
 const production = !process.env.ROLLUP_WATCH
 
@@ -20,7 +21,7 @@ function serve() {
 	return {
 		writeBundle() {
 			if (server) return
-			server = require("child_process").spawn("npm", ["run", "start", "--", "--dev"], {
+			server = childProcess.spawn("npm", ["run", "start", "--", "--dev"], {
 				stdio: ["ignore", "inherit", "inherit"],
 				shell: true
 			})
@@ -66,9 +67,7 @@ export default {
 			sourceMap: !production,
 			inlineSources: !production,
 			strict: true,
-			noImplicitAny: true,
-			allowJs: true,
-			exclude: ["**/*.test.ts"]
+			noImplicitAny: true
 		}),
 
 		// In dev mode, call `npm run start` once

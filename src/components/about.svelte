@@ -1,6 +1,15 @@
 <script lang="ts">
-    import Me from "../images/me.jpg";
-    import { Avatar, List, ListItem } from "svelte-materialify";
+    import Me from "../images/me.jpg"
+    import { Avatar, List, ListItem } from "svelte-materialify"
+
+    const goodStuff = [
+        "Born & lives in Portugal 🇵🇹",
+        "Graduated in 2015 in Computer Science 💻",
+        "Is a programmer 👩‍💻",
+        "Also loves to cook 🧑‍🍳",
+        "Listening to music 🎵",
+        "Running 👟 and exercise 💪"
+    ]
 </script>
 
 <div class="d-flex flex-row justify-space-between">
@@ -8,11 +17,8 @@
         <img src={Me} alt="Pedro Flores" width="250" height="250" />
     </Avatar>
     <List disabled>
-        <ListItem>Born in Portugal</ListItem>
-        <ListItem>Graduated in 2015 in Computer Science</ListItem>
-        <ListItem>Is a programmer 🤟</ListItem>
-        <ListItem>Also loves to cook 🧑‍🍳</ListItem>
-        <ListItem>And listening to music 🎵</ListItem>
+        {#each goodStuff as element}
+            <ListItem>{element}</ListItem>
+        {/each}
     </List>
 </div>
-
