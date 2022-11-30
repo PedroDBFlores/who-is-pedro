@@ -25,7 +25,8 @@
         {
             name: "Volkswagen Digital Solutions",
             startDate: new Date("01/20/2020"),
-            description: "New challenge that has completely changed and pushed me to be a better version of myself. Currently developing a application that helps customers easily enrol \
+            description:
+                "New challenge that has completely changed and pushed me to be a better version of myself. Currently developing a application that helps customers easily enrol \
             in Volkswagen's digital ecosystem. Also for some months developed a project around managing onboarding and offboarding of colleagues, so the management of various accounts could be \
             easily done.",
             technologiesUsed: [

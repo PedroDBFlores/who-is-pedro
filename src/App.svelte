@@ -1,28 +1,28 @@
 <script lang="ts">
-    import {MaterialApp} from "svelte-materialify"
-    import Heading from "./components/heading.svelte"
-    import About from "./components/about.svelte"
-    import ProfessionalPath from "./components/professional-path.svelte"
+    import { MaterialApp } from "svelte-materialify";
+    import Heading from "./components/heading.svelte";
+    import About from "./components/about.svelte";
+    import ProfessionalPath from "./components/professional-path.svelte";
 
-    let theme: "dark" | "light" = "light"
+    let theme: "dark" | "light" = "light";
 
     function toggleTheme() {
         if (theme === "light") {
-            theme = "dark"
+            theme = "dark";
         } else {
-            theme = "light"
+            theme = "light";
         }
     }
 </script>
 
 <MaterialApp {theme}>
     <main>
-        <Heading changeTheme={toggleTheme}/>
+        <Heading changeTheme={toggleTheme} />
         <div class="pa-5">
-            <About/>
+            <About />
         </div>
         <div class="pa-5">
-            <ProfessionalPath/>
+            <ProfessionalPath />
         </div>
     </main>
 </MaterialApp>

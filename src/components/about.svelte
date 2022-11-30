@@ -1,6 +1,6 @@
 <script lang="ts">
-    import Me from "../images/me.jpg"
-    import { Avatar, List, ListItem } from "svelte-materialify"
+    import Me from "../images/me.jpg";
+    import { Avatar, List, ListItem } from "svelte-materialify";
 
     const goodStuff = [
         "Born & lives in Portugal 🇵🇹",
@@ -8,8 +8,8 @@
         "Is a programmer 👩‍💻",
         "Also loves to cook 🧑‍🍳",
         "Listening to music 🎵",
-        "Running 👟 and exercise 💪"
-    ]
+        "Running 👟 and exercise 💪",
+    ];
 </script>
 
 <div class="d-flex flex-row justify-space-between">

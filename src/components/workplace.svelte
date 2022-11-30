@@ -1,17 +1,17 @@
 <script lang="ts" context="module">
     export type WorkplaceInfo = {
-        name: string
-        startDate: Date
-        endDate?: Date
-        description: string
-        technologiesUsed: string[]
+        name: string;
+        startDate: Date;
+        endDate?: Date;
+        description: string;
+        technologiesUsed: string[];
     };
 </script>
 
 <script lang="ts">
-    import { Card, CardText, CardTitle, Chip } from "svelte-materialify"
+    import { Card, CardText, CardTitle, Chip } from "svelte-materialify";
 
-    export let workspaceInfo: WorkplaceInfo
+    export let workspaceInfo: WorkplaceInfo;
 </script>
 
 <Card shaped class="ma-2">
