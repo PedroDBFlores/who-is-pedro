@@ -9,22 +9,22 @@
 </script>
 
 <script lang="ts">
-    import { Card, CardText, CardTitle, Chip } from "svelte-materialify";
+    import { Card, Chip, Text } from "@svelteuidev/core";
 
     export let workspaceInfo: WorkplaceInfo;
 </script>
 
-<Card shaped class="ma-2">
-    <CardTitle>{workspaceInfo.name}</CardTitle>
-    <div class="text-body-1">
-        {workspaceInfo.startDate.toLocaleDateString()} to {workspaceInfo.endDate?.toLocaleDateString() ??
-            "now"}
-    </div>
-    <CardText>
-        <div class="text-body-2">{workspaceInfo.description}</div>
-    </CardText>
-    <CardText><div class="text-subtitle-1">Technologies</div></CardText>
+<Card shadow="md" padding="lg" withBorder>
+    <Card.Section>
+        <Text>{workspaceInfo.name}</Text>
+        <Text>
+            {workspaceInfo.startDate.toLocaleDateString()} to {workspaceInfo.endDate?.toLocaleDateString() ??
+                "now"}
+        </Text>
+    </Card.Section>
+    <Text>{workspaceInfo.description}</Text>
+    <p>Technologies</p>
     {#each workspaceInfo.technologiesUsed as technology}
-        <Chip label class="ma-2 primary-color">{technology}</Chip>
+        <Chip disabled>{technology}</Chip>
     {/each}
 </Card>

@@ -34,14 +34,13 @@
     "sass": "^1.56.1",
     "svelte": "^3.53.1",
     "svelte-check": "^2.10.0",
-    "svelte-materialify": "0.3.11",
     "svelte-preprocess": "^4.10.7",
     "tslib": "^2.4.1",
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@mdi/font": "^5.9.55",
-    "@mdi/js": "^5.9.55",
+    "@svelteuidev/core": "^0.14.0",
+    "radix-icons-svelte": "^1.2.1",
     "sirv-cli": "^1.0.12"
   }
 }

@@ -1,18 +1,15 @@
 <script lang="ts">
     export let changeTheme: () => void;
 
-    import { Button, Icon } from "svelte-materialify";
-    import { mdiThemeLightDark } from "@mdi/js";
+    import { ActionIcon, Flex, Title, Tooltip } from "@svelteuidev/core";
+    import { ComponentBoolean } from "radix-icons-svelte";
 </script>
 
-<div class="d-flex justify-space-between">
-    <h2>Who is Pedro Flores?</h2>
-    <Button
-        aria-label="Toggle theme"
-        on:click={changeTheme}
-        icon
-        class="gray-text"
-    >
-        <Icon path={mdiThemeLightDark} />
-    </Button>
-</div>
+<Flex justify="space-between">
+    <Title>Who is Pedro Flores?</Title>
+    <Tooltip label="Toggle theme">
+        <ActionIcon variant='outline' aria-label="Toggle theme" on:click={changeTheme}>
+            <ComponentBoolean />
+        </ActionIcon>
+    </Tooltip>
+</Flex>

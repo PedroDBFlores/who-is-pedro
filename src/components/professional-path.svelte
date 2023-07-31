@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { Flex, Title } from "@svelteuidev/core";
     import type { WorkplaceInfo } from "./workplace.svelte";
     import Workspace from "./workplace.svelte";
 
@@ -42,12 +43,10 @@
 </script>
 
 <div>
-    <h4 class="text-left">Professional Path</h4>
-    <div class="d-flex justify-center mt-4 mb-4">
-        <div style="flex-grow:1;max-width:650px;">
-            {#each workplaces as workplace}
-                <Workspace workspaceInfo={workplace} />
-            {/each}
-        </div>
-    </div>
+    <Title order={2}>Professional Path</Title>
+    <Flex direction="column" gap="lg">
+        {#each workplaces as workplace}
+            <Workspace workspaceInfo={workplace} />
+        {/each}
+    </Flex>
 </div>

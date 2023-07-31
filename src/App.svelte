@@ -1,31 +1,29 @@
 <script lang="ts">
-    import { MaterialApp } from "svelte-materialify";
+    import { colorScheme, Grid, SvelteUIProvider } from "@svelteuidev/core";
     import Heading from "./components/heading.svelte";
     import About from "./components/about.svelte";
     import ProfessionalPath from "./components/professional-path.svelte";
 
-    let theme: "dark" | "light" = "light";
-
     function toggleTheme() {
-        if (theme === "light") {
-            theme = "dark";
-        } else {
-            theme = "light";
-        }
+        colorScheme.update((v) => (v === "light" ? "dark" : "light"));
     }
 </script>
 
-<MaterialApp {theme}>
-    <main>
-        <Heading changeTheme={toggleTheme} />
-        <div class="pa-5">
-            <About />
-        </div>
-        <div class="pa-5">
-            <ProfessionalPath />
-        </div>
-    </main>
-</MaterialApp>
+<main>
+    <SvelteUIProvider withGlobalStyles themeObserver={$colorScheme}>
+        <Grid spacing="md" cols={3}>
+            <Grid.Col>
+                <Heading changeTheme={toggleTheme} />
+            </Grid.Col>
+            <Grid.Col span={3}>
+                <About />
+            </Grid.Col>
+            <Grid.Col span={3}>
+                <ProfessionalPath />
+            </Grid.Col>
+        </Grid>
+    </SvelteUIProvider>
+</main>
 
 <style>
     main {
